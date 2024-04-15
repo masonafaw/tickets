@@ -12,7 +12,7 @@ const ms = require('ms');
 
 module.exports = class ForceCloseSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'force-close';
+		const name = 'Force-close';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -23,23 +23,23 @@ module.exports = class ForceCloseSlashCommand extends SlashCommand {
 			options: [
 				{
 					autocomplete: true,
-					name: 'category',
+					name: 'Category',
 					required: false,
 					type: ApplicationCommandOptionType.Integer,
 				},
 				{
-					name: 'reason',
+					name: 'Reason',
 					required: false,
 					type: ApplicationCommandOptionType.String,
 				},
 				{
 					autocomplete: true,
-					name: 'ticket',
+					name: 'Ticket',
 					required: false,
 					type: ApplicationCommandOptionType.String,
 				},
 				{
-					name: 'time',
+					name: 'Time',
 					required: false,
 					type: ApplicationCommandOptionType.String,
 				},

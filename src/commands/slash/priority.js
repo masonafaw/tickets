@@ -15,7 +15,7 @@ const getEmoji = priority => {
 
 module.exports = class PrioritySlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'priority';
+		const name = 'Priority';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -26,7 +26,7 @@ module.exports = class PrioritySlashCommand extends SlashCommand {
 			options: [
 				{
 					choices: ['HIGH', 'MEDIUM', 'LOW'],
-					name: 'priority',
+					name: 'Priority',
 					required: true,
 					type: ApplicationCommandOptionType.String,
 				},

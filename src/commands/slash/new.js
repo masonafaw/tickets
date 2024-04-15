@@ -4,7 +4,7 @@ const { useGuild } = require('../../lib/tickets/utils');
 
 module.exports = class NewSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'new';
+		const name = 'New';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -15,7 +15,7 @@ module.exports = class NewSlashCommand extends SlashCommand {
 			options: [
 				{
 					autocomplete: true,
-					name: 'references',
+					name: 'References',
 					required: false,
 					type: ApplicationCommandOptionType.String,
 				},

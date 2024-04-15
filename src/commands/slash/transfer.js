@@ -8,7 +8,7 @@ const { decrypt } = new Cryptr(process.env.ENCRYPTION_KEY);
 
 module.exports = class TransferSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'transfer';
+		const name = 'Transfer';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -18,7 +18,7 @@ module.exports = class TransferSlashCommand extends SlashCommand {
 			nameLocalizations: client.i18n.getAllMessages(`commands.slash.${name}.name`),
 			options: [
 				{
-					name: 'member',
+					name: 'Member',
 					required: true,
 					type: ApplicationCommandOptionType.User,
 				},

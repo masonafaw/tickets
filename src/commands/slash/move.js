@@ -5,7 +5,7 @@ const { isStaff } = require('../../lib/users');
 const { getEmoji } = require('./priority');
 module.exports = class MoveSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'move';
+		const name = 'Move';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -16,7 +16,7 @@ module.exports = class MoveSlashCommand extends SlashCommand {
 			options: [
 				{
 					autocomplete: true,
-					name: 'category',
+					name: 'Category',
 					required: true,
 					type: ApplicationCommandOptionType.Integer,
 				},

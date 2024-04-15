@@ -5,7 +5,7 @@ const { version } = require('../../../package.json');
 
 module.exports = class ClaimSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'help';
+		const name = 'Help';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -43,18 +43,6 @@ module.exports = class ClaimSlashCommand extends SlashCommand {
 			fields.unshift(
 				{
 					inline: true,
-					name: getMessage('commands.slash.help.response.links.links'),
-					value: [
-						['commands', 'https://discordtickets.app/features/commands'],
-						['docs', 'https://discordtickets.app'],
-						['feedback', 'https://lnk.earth/dsctickets-feedback'],
-						['support', 'https://lnk.earth/discord'],
-					]
-						.map(([l, url]) => `> [${getMessage('commands.slash.help.response.links.' + l)}](${url})`)
-						.join('\n'),
-				},
-				{
-					inline: true,
 					name: getMessage('commands.slash.help.response.settings'),
 					value: '> ' + process.env.HTTP_EXTERNAL + '/settings',
 				},
@@ -70,7 +58,7 @@ module.exports = class ClaimSlashCommand extends SlashCommand {
 					.setColor(settings.primaryColour)
 					.setTitle(getMessage('commands.slash.help.title'))
 					.setDescription(staff
-						? `**Discord Tickets v${version} by eartharoid.**`
+						? `**Discord Tickets v${version} by eartharoid. Customized by Mjfawks1**`
 						: getMessage('commands.slash.help.response.description', { command: `</${newCommand.name}:${newCommand.id}>` }))
 					.setFields(fields),
 			],

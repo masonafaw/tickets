@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 
 module.exports = class CloseSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'close';
+		const name = 'Close';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),

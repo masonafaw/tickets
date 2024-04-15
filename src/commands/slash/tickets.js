@@ -7,7 +7,7 @@ const { decrypt } = new Cryptr(process.env.ENCRYPTION_KEY);
 
 module.exports = class TicketsSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'tickets';
+		const name = 'Tickets';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -17,7 +17,7 @@ module.exports = class TicketsSlashCommand extends SlashCommand {
 			nameLocalizations: client.i18n.getAllMessages(`commands.slash.${name}.name`),
 			options: [
 				{
-					name: 'member',
+					name: 'Member',
 					required: false,
 					type: ApplicationCommandOptionType.User,
 				},

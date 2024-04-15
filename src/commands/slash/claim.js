@@ -2,7 +2,7 @@ const { SlashCommand } = require('@eartharoid/dbf');
 
 module.exports = class ClaimSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'claim';
+		const name = 'Claim';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),

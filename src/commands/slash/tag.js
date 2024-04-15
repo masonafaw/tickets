@@ -4,7 +4,7 @@ const ExtendedEmbedBuilder = require('../../lib/embed');
 
 module.exports = class TagSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'tag';
+		const name = 'Tag';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -15,7 +15,7 @@ module.exports = class TagSlashCommand extends SlashCommand {
 			options: [
 				{
 					autocomplete: true,
-					name: 'tag',
+					name: 'Tag',
 					required: true,
 					type: ApplicationCommandOptionType.Integer,
 				},

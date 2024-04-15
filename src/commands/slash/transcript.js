@@ -11,7 +11,7 @@ const ExtendedEmbedBuilder = require('../../lib/embed');
 
 module.exports = class TranscriptSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'transcript';
+		const name = 'Transcript';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -22,12 +22,12 @@ module.exports = class TranscriptSlashCommand extends SlashCommand {
 			options: [
 				{
 					autocomplete: true,
-					name: 'ticket',
+					name: 'Ticket',
 					required: true,
 					type: ApplicationCommandOptionType.String,
 				},
 				{
-					name: 'member',
+					name: 'Member',
 					required: false,
 					type: ApplicationCommandOptionType.User,
 				},

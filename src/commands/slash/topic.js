@@ -11,7 +11,7 @@ const ExtendedEmbedBuilder = require('../../lib/embed');
 
 module.exports = class TopicSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'topic';
+		const name = 'Topic';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),

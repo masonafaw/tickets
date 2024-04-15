@@ -6,7 +6,7 @@ const { logTicketEvent } = require('../../lib/logging');
 
 module.exports = class RemoveSlashCommand extends SlashCommand {
 	constructor(client, options) {
-		const name = 'remove';
+		const name = 'Remove';
 		super(client, {
 			...options,
 			description: client.i18n.getMessage(null, `commands.slash.${name}.description`),
@@ -16,13 +16,13 @@ module.exports = class RemoveSlashCommand extends SlashCommand {
 			nameLocalizations: client.i18n.getAllMessages(`commands.slash.${name}.name`),
 			options: [
 				{
-					name: 'member',
+					name: 'Member',
 					required: true,
 					type: ApplicationCommandOptionType.User,
 				},
 				{
 					autocomplete: true,
-					name: 'ticket',
+					name: 'Ticket',
 					required: false,
 					type: ApplicationCommandOptionType.String,
 				},
