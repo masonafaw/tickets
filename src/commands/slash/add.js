@@ -22,7 +22,7 @@ module.exports = class AddSlashCommand extends SlashCommand {
 				},
 				{
 					autocomplete: true,
-					name: 'ticket',
+					name: 'Ticket',
 					required: false,
 					type: ApplicationCommandOptionType.String,
 				},
